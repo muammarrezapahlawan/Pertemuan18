@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function penjumlahan(a, b) {
+        console.log(a + b);
+      }
+
+      function perkalian(a, b) {
+        return a * b;
+      }
+
+      function sayHello(name) {
+        console.log("hi, " + name + " apa kabar!");
+      }
+
+      function cekNilai(nilai) {
+        if (nilai <= 0) {
+          return 0;
+        } else {
+          return "Nilai OK";
+          console.log("okmi");
+        }
+      }
+
+      function perkalianLima(num) {
+        return num * 5;
+      }
+
+      console.log(perkalianLima(10));
+
+      function ganjilGenap(num) {
+        if (num % 2 == 0) return "Bilangan Genap";
+        else return "Bilangan Ganjil";
+      }
+
+      function getFinalScore(name, nilai) {
+        if (nilai >= 90) {
+          console.log(`nama ${name} . memperoleh nilai ${nilai}`);
+        } else if (nilai > 60) {
+          return "B";
+        } else if (nilai > 40) {
+          return "C";
+        } else if (nilai > 20) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+
+      function getName(name) {
+        return name;
+      }
+
+      console.log(getName("Rima"));
+      getFinalScore("narti", 95);
+      // console.log(getFinalScore(55));
+      // console.log(getFinalScore(95));
+
+      console.log(ganjilGenap(2));
+
+      console.log(cekNilai(-5));
+
+      penjumlahan(34, 3);
+      console.log(perkalian(5, 7));
+
+      sayHello("adit");
+      sayHello("narti");
+      sayHello("Rahma");
+      sayHello("aden");
+    </script>
+  </body>
+</html>
