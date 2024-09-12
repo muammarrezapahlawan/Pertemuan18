@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom Project</title>
+    <style>
+      .btn-subscribe {
+        background-color: red;
+        color: white;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button class="btn-subscribe" onclick="subscribe()">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input
+      class="js-cost-input"
+      placeholder="Cos Of Order"
+      onkeydown="handleCostKeyword()"
+    />
+    <button onclick="calculation()">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <script>
+      function handleCostKeyword() {
+        if (event.keyCode === 13) {
+          calculation();
+        }
+      }
+
+      function calculation() {
+        const inputElement = document.querySelector(".js-cost-input");
+        let cost = Number(inputElement.value);
+
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+      }
+
+      function subscribe() {
+        const btnElement = document.querySelector(".btn-subscribe");
+
+        if (btnElement.innerText === "Subscribe") {
+          btnElement.innerText = "Subscribed";
+        } else {
+          btnElement.innerText = "Subscribe";
+        }
+      }
+    </script>
+  </body>
+</html>

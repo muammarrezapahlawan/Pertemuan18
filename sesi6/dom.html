@@ -5,7 +5,12 @@
   </head>
   <body>
     <button>hello</button>
+    <button class="js-button-second">Second Button</button>
     <script>
+      console.log(document.querySelector(".js-button-second").innerHTML);
+      const btnElement = document.querySelector(".js-button-second");
+      btnElement.innerHTML = "Second manipulation";
+
       console.log(document.querySelector("button").innerHTML);
 
       document.querySelector("button").innerHTML = "Button";
